@@ -1,5 +1,5 @@
 {
-  "buildCommand": "bash build.sh",
+  "buildCommand": "npm install && cd frontend && npm ci --omit=dev && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite"
 }
