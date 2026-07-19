@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm install --omit=dev --prefix frontend && npm run build --prefix frontend",
+  "buildCommand": "cd frontend && npm ci --omit=dev && npm run build",
   "outputDirectory": "frontend/dist",
-  "framework": "vite",
-  "installCommand": "npm install --no-save --legacy-peer-deps"
+  "framework": "vite"
 }
