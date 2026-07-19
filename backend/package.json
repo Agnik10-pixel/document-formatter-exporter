@@ -1,0 +1,17 @@
+{
+  "name": "document-formatter-backend",
+  "version": "1.0.0",
+  "description": "Backend for Document Formatter & Exporter - handles DOCX generation",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docx": "^8.5.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

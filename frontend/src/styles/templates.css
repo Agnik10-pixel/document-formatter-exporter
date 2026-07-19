@@ -1,0 +1,129 @@
+/* =============================================================
+   templates.css — Per-template visual identity for the preview
+   page (and, since it's captured via html2canvas, the PDF too).
+
+   To add a new template, add a ".template-<id> { ... }" block
+   plus overrides for .doc-title / .doc-heading / .doc-paragraph
+   / .doc-bullet within it.
+   ============================================================= */
+
+/* Shared base elements (overridden per template below) */
+.doc-title {
+  margin: 0 0 18px;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.doc-heading {
+  margin: 26px 0 10px;
+  font-size: 1.05rem;
+}
+
+.doc-paragraph {
+  margin: 0 0 12px;
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+.doc-bullet-wrapper {
+  margin: 0 0 12px;
+  padding-left: 22px;
+}
+
+.doc-bullet {
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+}
+
+/* -----------------------------------------------------------
+   RESUME — bold name header, uppercase section labels with a
+   rule underneath, tight and scannable.
+   ----------------------------------------------------------- */
+.template-resume {
+  font-family: var(--font-ui);
+}
+
+.template-resume .doc-title {
+  font-weight: 700;
+  color: #1c1f2b;
+  letter-spacing: -0.01em;
+}
+
+.template-resume .doc-heading {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent-soft);
+  padding-bottom: 6px;
+}
+
+.template-resume .doc-bullet::marker {
+  color: var(--color-accent);
+}
+
+/* -----------------------------------------------------------
+   BUSINESS LETTER — formal serif, generous line height,
+   justified paragraphs, no decorative headings.
+   ----------------------------------------------------------- */
+.template-letter {
+  font-family: var(--font-doc);
+}
+
+.template-letter .doc-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
+.template-letter .doc-paragraph {
+  text-align: justify;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.template-letter .doc-heading {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------------
+   PROJECT REPORT — centered title-page feel, numbered-looking
+   teal section headings, wider measure for long-form reading.
+   ----------------------------------------------------------- */
+.template-report {
+  font-family: var(--font-doc);
+}
+
+.template-report .doc-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.template-report .doc-title::after {
+  content: "Project Report";
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0f766e;
+  margin-top: 10px;
+}
+
+.template-report .doc-heading {
+  color: #0f766e;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-left: 3px solid #0f766e;
+  padding-left: 10px;
+}
+
+.template-report .doc-paragraph {
+  font-size: 0.98rem;
+}
