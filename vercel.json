@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd frontend && npm ci --omit=dev && npm run build",
-  "outputDirectory": "frontend/dist",
+  "root": "frontend",
+  "buildCommand": "npm ci --omit=dev && npm run build",
+  "outputDirectory": "dist",
   "framework": "vite"
 }
